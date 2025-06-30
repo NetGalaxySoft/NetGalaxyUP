@@ -1,0 +1,57 @@
+.app-layout {
+  display: grid;                         /* прави .app-layout grid контейнер */
+  grid-template-rows: 60px 1fr 40px;     /* три реда: 
+                                            – първият е точно 60px (Topbar), 
+                                            – вторият (съдържанието) заема остатъчното пространство (1fr), 
+                                            – третият е 40px (Footer) */
+  grid-template-columns: 200px 1fr;      /* две колони:
+                                            – първата е 200px широка (Sidebar), 
+                                            – втората (главното съдържание) заема остатъчното място (1fr) */
+  height: 100vh;                         /* контейнерът заема 100% от височината на прозореца */
+}
+
+/* Горен бар */
+.app-layout > .topbar {
+  grid-row: 1; grid-column: 1 / -1;
+  background: #303030; /* тъмно сиво */
+  color: #FFFFFF;      /* бял текст */
+}
+
+/* Ляв сайдбар – оригинално дълбоко синьо-зелено */
+.app-layout > .sidebar {
+  grid-row: 2; grid-column: 1;
+  background: #155E63; /* още по-светло сиво */
+  color: #FFFFFF;      /* бял текст */
+}
+
+/* Работно пространство */
+.app-layout > .content {
+  grid-row: 2; grid-column: 2;
+  background: #ffffff; /* бяло работно пространство */
+}
+
+/* Долен бар */
+.app-layout > .footer {
+  grid-row: 3; grid-column: 1 / -1;
+  background: #303030; /* тъмно сиво */
+  color: #FFFFFF;      /* бял текст */
+}
+
+/* Ако искате глобален фон на тялото: */
+body {
+  margin: 0;
+  background: #fafafa; /* много светло сиво */
+}
+
+/* Акцентен цвят за бутони или линкове в сайдбара */
+.sidebar-button,
+.sidebar a {
+  background-color: #F2C57C;  /* топло „горчично“ жълто */
+  color: #303030;
+}
+
+/* Пример за hover ефект */
+.sidebar-button:hover,
+.sidebar a:hover {
+  background-color: #D4A24C;
+}
