@@ -49,7 +49,7 @@ uvicorn src.app:app --reload
 cd frontend
 npm install
 npm run dev
-
+```
 
 📡 **Бекенд:**  
 http://localhost:8000
