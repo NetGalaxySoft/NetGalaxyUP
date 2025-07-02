@@ -3,7 +3,7 @@
 # ==========================================================================
 #  install-netgalaxyup.sh – Автоматична инсталация на проекта NetGalaxyUP
 # --------------------------------------------------------------------------
-#  Версия: 1.5
+#  Версия: 1.6
 #  Дата: 2025-07-02
 #  Автор: Ilko Yordanov / NetGalaxy
 # ==========================================================================
@@ -40,14 +40,16 @@ if [[ -d "NetGalaxyUP" ]]; then
 else
   echo "⏳ Клониране на проекта от GitHub..."
 
-  export GIT_ASKPASS="$(mktemp)"
-  echo "#!/bin/bash" > "$GIT_ASKPASS"
-  echo "echo $GITHUB_TOKEN" >> "$GIT_ASKPASS"
-  chmod +x "$GIT_ASKPASS"
+  ASKPASS_SCRIPT="$(mktemp)"
+  echo "#!/bin/bash" > "$ASKPASS_SCRIPT"
+  echo "echo $GITHUB_TOKEN" >> "$ASKPASS_SCRIPT"
+  chmod +x "$ASKPASS_SCRIPT"
 
+  export GIT_ASKPASS="$ASKPASS_SCRIPT"
+  export GIT_USERNAME="NetGalaxySoft"
   GIT_TERMINAL_PROMPT=0 git clone https://github.com/NetGalaxySoft/NetGalaxyUP.git
 
-  rm -f "$GIT_ASKPASS"
+  rm -f "$ASKPASS_SCRIPT"
 fi
 
 cd NetGalaxyUP || exit 1
