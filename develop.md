@@ -94,6 +94,10 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"app": "NetGalaxyUP", "status": "ok"}
+
 @app.get("/health")
 def read_health():
     return {"status": "ok"}
@@ -107,8 +111,16 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 ---
 
-### 🌐 Достъп до API
+### 🌐 Тест на сървъра
+`http://<IP-АДРЕС>:8000/`
+
+трябва да върне:
+{"status": "ok"}
+
 `http://<IP-АДРЕС>:8000/health`
+
+трябва да върне:
+{"app": "NetGalaxyUP", "status": "ok"}
 
 ---
 
