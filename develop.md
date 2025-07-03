@@ -29,3 +29,41 @@ NetGalaxyUP/
 └── README.md      # Документация
 ```
 
+---
+
+## ✅ Стъпка 2: Инициализиране на FastAPI проект (backend)
+
+```bash
+cd backend
+sudo python3 -m venv venv
+source venv/bin/activate
+pip install fastapi uvicorn
+sudo touch main.py
+```
+
+### 📄 Съдържание на `main.py`
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/health")
+def read_health():
+    return {"status": "ok"}
+```
+
+---
+
+### ▶️ Стартиране на тестов сървър (по избор)
+
+```bash
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+
+---
+
+### 🌐 Достъп до API
+
+`http://<IP-АДРЕС>:8000/health`
+
