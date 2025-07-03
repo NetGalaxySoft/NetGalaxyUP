@@ -103,10 +103,12 @@ def read_health():
     return {"status": "ok"}
 ```
 
-### ▶️ Стартиране на тестов сървър (по избор)
+### ▶️ Стартиране на тестов сървър
 
 ```bash
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
+curl -fsSL https://NetGalaxySoft:<TOKEN>@raw.githubusercontent.com/NetGalaxySoft/servers/main/fastapi-autostart.sh -o fastapi-autostart.sh
+chmod +x fastapi-autostart.sh
+./fastapi-autostart.sh 8000
 ```
 
 ---
