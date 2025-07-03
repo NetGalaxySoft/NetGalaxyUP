@@ -79,10 +79,15 @@ cd backend
 python3 -m venv venv
 source venv/bin/activate
 pip install fastapi uvicorn
-touch main.py
 ```
 
-### 📄 Съдържание на `main.py`
+### Създаване на началния файл на приложението:
+```bash
+touch main.py
+nano main.py
+```
+
+### поставете в main.py следния код:
 
 ```python
 from fastapi import FastAPI
@@ -93,8 +98,6 @@ app = FastAPI()
 def read_health():
     return {"status": "ok"}
 ```
-
----
 
 ### ▶️ Стартиране на тестов сървър (по избор)
 
