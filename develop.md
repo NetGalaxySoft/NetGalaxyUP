@@ -13,9 +13,9 @@
 ### 📁 Команди за изпълнение:
 
 ```bash
-mkdir -p NetGalaxyUP/{backend,frontend,packages,languages,scripts}
+sudo mkdir -p NetGalaxyUP/{backend,frontend,packages,languages,scripts}
 cd NetGalaxyUP
-touch README.md
+sudo touch README.md
 ```
 
 ## 🗂️ Получената структура:
