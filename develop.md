@@ -185,6 +185,138 @@ chmod +x fastapi-autostart.sh
 
 ---
 
+Сега ще изградим напълно работеща структура в `~/NetGalaxyUP/frontend/`, така че при стартиране на порт 5173 да виждате **графичен интерфейс (скелет)** на NetGalaxyUP.
+
+---
+
+## 🧱 Структурата:
+
+```
+NetGalaxyUP/
+└── frontend/
+    ├── main.py
+    ├── venv/
+    └── templates/
+        └── index.html
+```
+
+---
+
+## ✅ Стъпка 4: Създаване на директория и активиране на виртуална среда
+
+```bash
+cd ~/NetGalaxyUP
+mkdir -p frontend/templates
+cd frontend
+python3 -m venv venv
+source venv/bin/activate
+pip install fastapi uvicorn jinja2
+```
+
+---
+
+## ✅ Стъпка 5: Създаване на файл `main.py` във `frontend/`
+
+```bash
+nano main.py
+```
+
+Поставете в него следния код:
+
+```python
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
+
+app = FastAPI()
+templates = Jinja2Templates(directory="templates")
+
+@app.get("/", response_class=HTMLResponse)
+async def show_home(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+```
+
+---
+
+## ✅ Стъпка 6: Създаване на файл `templates/index.html`
+
+```bash
+nano templates/index.html
+```
+
+Поставете този примерен скелет:
+
+```html
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetGalaxyUP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- 🎯 Topbar с лого -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <div class="text-xl font-bold text-blue-600">🌌 NetGalaxyUP</div>
+    <div class="text-sm text-gray-600">[Потребител/Език]</div>
+  </header>
+
+  <!-- 📚 Навигация -->
+  <nav class="bg-white p-2 flex space-x-2 overflow-x-auto">
+    <button class="px-3 py-1 bg-blue-100 rounded">Dashboard</button>
+    <button class="px-3 py-1 bg-gray-100 rounded">Модул 1</button>
+    <button class="px-3 py-1 bg-gray-100 rounded">Модул 2</button>
+  </nav>
+
+  <!-- 🧭 Подменю -->
+  <div class="p-2 flex space-x-2">
+    <button class="px-2 py-1 bg-gray-200 rounded">Подменю A</button>
+    <button class="px-2 py-1 bg-gray-200 rounded">Подменю B</button>
+  </div>
+
+  <!-- 📄 Работна зона -->
+  <main class="p-4">
+    <div class="bg-white p-4 rounded shadow">
+      <h1 class="text-xl font-semibold">Добре дошъл!</h1>
+      <p class="mt-2 text-sm text-gray-600">
+        Това е началният скелет на приложението NetGalaxyUP.
+      </p>
+    </div>
+  </main>
+
+</body>
+</html>
+```
+
+---
+
+## ✅ Стъпка 7: Автоматично стартиране на скелета на порт 5173
+
+```bash
+curl -fsSL https://NetGalaxySoft:<TOKEN>@raw.githubusercontent.com/NetGalaxySoft/servers/main/fastapi-autostart.sh -o fastapi-autostart.sh
+chmod +x fastapi-autostart.sh
+./fastapi-autostart.sh 5173
+```
+
+> 🔁 Скриптът ще създаде услуга `netgalaxyup5173`, която ще стартира автоматично при всеки рестарт.
+
+---
+
+## ✅ Готово! Проверете резултата в браузъра:
+
+```
+http://5.189.160.200:5173/
+```
+
+трябва да видите визуалния скелет на приложението.
+
+---
+
+Готов ли си да продължим с добавяне на динамични елементи (език, логин зона и т.н.) или първо да запишем това в `develop.md`?
+
+
 ### Изтриване на проекта!
 ```bash
 cd ~
