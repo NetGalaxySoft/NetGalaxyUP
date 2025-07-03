@@ -55,7 +55,7 @@ sudo chmod g+s NetGalaxyUP
 cd NetGalaxyUP
 touch README.md
 
-```
+```txt
 NetGalaxyUP/
 ├── backend/                    # FastAPI сървър (API бекенд)
 │   └── main.py                # Начален API файл
