@@ -176,8 +176,15 @@ npm install
 ## ✅ 3.2. Инсталиране и конфигурация на Tailwind CSS
 
 ```bash
+# Ако сте в Python venv, излезте:
+deactivate
+
+# Инсталиране на Tailwind и свързани пакети:
 npm install -D tailwindcss postcss autoprefixer
+
+# Създаване на конфигурационни файлове:
 npx tailwindcss init -p
+
 ```
 
 ---
