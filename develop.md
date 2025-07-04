@@ -40,7 +40,7 @@ sudo usermod -aG netgalaxyup $USER
 
 ```bash
 # 1. Създаване на основните директории на проекта
-mkdir -p NetGalaxyUP/{backend,frontend/components/{layout,shared,workspace},frontend/public,languages,packages}
+mkdir -p NetGalaxyUP/{backend/templates,backend/venv,frontend/components/{layout,shared,workspace},frontend/public,frontend/venv,languages,packages,scripts}
 
 # 2. Задаване на собственик: текущ потребител и група netgalaxyup
 sudo chown -R $USER:netgalaxyup NetGalaxyUP
@@ -59,17 +59,21 @@ touch README.md
 ### 🗂️ Получената структура:
 ```
 NetGalaxyUP/
-├── backend/                    # FastAPI сървър (API бекенд)
-│   └── main.py                # Начален API файл
-├── frontend/                  # Клиентска част (PWA интерфейс)
-│   ├── components/            # Компоненти на интерфейса
-│   │   ├── layout/            # Основни елементи: TopBar, SideBar, Footer
-│   │   ├── workspace/         # Централна зона за съдържание (Workspace)
-│   │   └── shared/            # Общи елементи: известия и други
-│   └── public/                # Статични ресурси (favicon, manifest и др.)
-├── languages/                 # JSON файлове с езикови преводи
-├── packages/                  # Основни пакети (напр. login, profile)
-└── README.md                  # Документация на проекта
+├── backend/              # FastAPI сървър (API бекенд)
+│   ├── main.py           # Начален API файл
+│   ├── templates/        # HTML шаблони за FastAPI
+│   └── venv/             # Виртуална среда за backend
+├── frontend/             # Клиентска част (PWA интерфейс)
+│   ├── components/       # Компоненти на интерфейса
+│   │   ├── layout/       # Основни елементи: TopBar, SideBar, Footer
+│   │   ├── workspace/    # Централна зона за съдържание (Workspace)
+│   │   └── shared/       # Общи елементи: известия и др.
+│   ├── public/           # Статични ресурси (favicon, manifest и др.)
+│   └── venv/             # Виртуална среда за frontend (ако се ползва FastAPI)
+├── languages/            # JSON файлове с езикови преводи
+├── packages/             # Основни пакети (напр. login, profile)
+├── scripts/              # Скриптове (напр. fastapi-autostart.sh)
+└── README.md             # Документация на проекта
 
 ```
 
