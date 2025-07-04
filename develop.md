@@ -174,7 +174,7 @@ npm install
 ## ✅ 3.2. Инсталиране и конфигурация на Tailwind CSS
 
 ```bash
-# Ако сте в Python venv, излезте:
+# Ако сте в Python venv, излезте с командата:
 deactivate
 
 # Инсталиране на Tailwind и свързани пакети:
