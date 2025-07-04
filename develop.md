@@ -364,7 +364,7 @@ export default App;
 ```bash
 # Създаване на systemd услуга за Vite сървъра на порт 5173
 cd ~/NetGalaxyUP
-./fastapi-autostart.sh 5173
+./scripts/fastapi-autostart.sh 5173
 
 ```
 
