@@ -160,7 +160,7 @@ npm create vite@latest . -- --template react
 ○ Remove existing files and continue
 ○ Ignore files and continue
 ```
-След то ва продължете с:
+След това продължете с:
 ```bash
 npm install
 
