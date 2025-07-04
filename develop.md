@@ -231,7 +231,7 @@ nano src/index.css
 
 ```bash
 # 📥 Изтегляне на скрипта fastapi-autostart.sh
-curl -fsSL https://raw.githubusercontent.com/NetGalaxySoft/servers/main/scripts/fastapi-autostart.sh -o scripts/fastapi-autostart.sh
+curl -fsSL https://NetGalaxySoft:<TOKEN>@raw.githubusercontent.com/NetGalaxySoft/servers/main/scripts/fastapi-autostart.sh -o scripts/fastapi-autostart.sh
 chmod +x scripts/fastapi-autostart.sh
 
 # 🚀 Стартиране на Vite сървъра чрез systemd (порт 5173)
