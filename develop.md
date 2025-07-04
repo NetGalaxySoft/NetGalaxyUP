@@ -128,12 +128,12 @@ chmod +x scripts/fastapi-autostart.sh
 ---
 
 ### 🌐 2.3. Тест на сървъра
-`http://$(hostname -I | awk '{print $1}'):8000/`
+`http://<IP_ADDRESS>:8000`
 
 трябва да върне:
 {"status": "ok"}
 
-`http://$(hostname -I | awk '{print $1}'):8000/health`
+`http://<IP_ADDRESS>:8000/health`
 
 трябва да върне:
 {"app": "NetGalaxyUP", "status": "ok"}
