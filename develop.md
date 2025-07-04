@@ -363,7 +363,7 @@ export default App;
 
 ```bash
 # Създаване на systemd услуга за Vite сървъра на порт 5173
-./fastapi-autostart.sh vite 5173
+./fastapi-autostart.sh 5173
 
 ```
 
