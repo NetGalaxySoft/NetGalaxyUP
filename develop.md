@@ -160,15 +160,14 @@ npm create vite@latest . -- --template react
 ○ Remove existing files and continue
 ○ Ignore files and continue
 ```
-След това продължете с:
-```bash
-npm install
-
-```
-
 ✅ Изберете: Ignore files and continue
 
 Това ще запази всички съществуващи папки (като src/components/) и ще добави само нужните файлове на Vite шаблона, без да изтрива нищо.
+
+Завършете инсталацията с:
+```bash
+npm install
+```
 
 ---
 
