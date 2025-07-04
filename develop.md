@@ -155,12 +155,10 @@ chmod +x fastapi-autostart.sh
 cd ~/NetGalaxyUP/frontend
 npm create vite@latest . -- --template react
 npm install
-```
 
 🔹 На въпрос за име на проекта, натиснете `Enter`, тъй като вече сте в папката `frontend`.
->🔹 Ако се появи следното съобщение:
+🔹 Ако се появи следното съобщение:
 
-```bash
 ◆  Current directory is not empty. Please choose how to proceed:
 ● Cancel operation
 ○ Remove existing files and continue
