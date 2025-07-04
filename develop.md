@@ -94,13 +94,13 @@ source venv/bin/activate
 pip install fastapi uvicorn
 ```
 
-### Създаване на началния файл на приложението:
+### 2.1. Създаване на началния файл на приложението:
 ```bash
 touch main.py
 nano main.py
 ```
 
-### поставете в main.py следния код:
+**поставете в main.py следния код:**
 
 ```python
 from fastapi import FastAPI
@@ -116,17 +116,17 @@ def read_health():
     return {"app": "NetGalaxyUP", "status": "ok"}
 ```
 
-### ▶️ Стартиране на тестов сървър
+### ▶️ 2.2. Стартиране на тестов сървър
 
 ```bash
-curl -fsSL https://NetGalaxySoft:<TOKEN>@raw.githubusercontent.com/NetGalaxySoft/servers/main/fastapi-autostart.sh -o fastapi-autostart.sh
-chmod +x fastapi-autostart.sh
+curl -fsSL https://NetGalaxySoft:<TOKEN>@raw.githubusercontent.com/NetGalaxySoft/servers/main/scripts/fastapi-autostart.sh -o scripts/fastapi-autostart.sh
+chmod +x scripts/fastapi-autostart.sh
 ./fastapi-autostart.sh 8000
 ```
 
 ---
 
-### 🌐 Тест на сървъра
+### 🌐 2.3. Тест на сървъра
 `http://$(hostname -I | awk '{print $1}'):8000/`
 
 трябва да върне:
