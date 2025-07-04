@@ -233,13 +233,13 @@ nano src/index.css
 ```bash
 # 🚀 Стартиране на Vite сървъра чрез systemd (порт 5173)
 cd ~/NetGalaxyUP
-./scripts/fastapi-autostart.sh vite 5173
+./scripts/fastapi-autostart.sh 5173
 ```
 
 След това отворете:
 
 ```
-`http://$(hostname -I | awk '{print $1}'):5173`
+`http://<IP_ADDRESS>:5173`
 ```
 
 Трябва да се визуализира началният React екран (съобщение: *Vite + React*).
