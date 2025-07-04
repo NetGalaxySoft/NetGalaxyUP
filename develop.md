@@ -252,15 +252,7 @@ cd ~/NetGalaxyUP
 
 # ✅ Стъпка 4: Създаване на основните компоненти на интерфейса
 
-## ✅ 4.1. Създаване на директориите
-
-```bash
-mkdir -p src/components/{layout,workspace,shared}
-```
-
----
-
-## ✅ 4.2. Създаване на `TopBar.jsx`
+## ✅ 4.1. Създаване на `TopBar.jsx`
 
 ```bash
 nano src/components/layout/TopBar.jsx
@@ -278,7 +270,7 @@ export default function TopBar() {
 
 ---
 
-## ✅ 4.3. Създаване на `SideBar.jsx`
+## ✅ 4.2. Създаване на `SideBar.jsx`
 
 ```bash
 nano src/components/layout/SideBar.jsx
@@ -296,7 +288,7 @@ export default function SideBar() {
 
 ---
 
-## ✅ 4.4. Създаване на `Workspace.jsx`
+## ✅ 4.3. Създаване на `Workspace.jsx`
 
 ```bash
 nano src/components/workspace/Workspace.jsx
@@ -314,7 +306,7 @@ export default function Workspace() {
 
 ---
 
-## ✅ 4.5. Създаване на `Footer.jsx`
+## ✅ 4.4. Създаване на `Footer.jsx`
 
 ```bash
 nano src/components/layout/Footer.jsx
@@ -332,7 +324,7 @@ export default function Footer() {
 
 ---
 
-## ✅ 4.6. Импортиране и сглобяване в `App.jsx`
+## ✅ 4.5. Импортиране и сглобяване в `App.jsx`
 
 Отвори `src/App.jsx` и го замени със следния код:
 
@@ -360,7 +352,7 @@ export default App;
 
 ---
 
-## ✅ 4.7. Стартиране и визуална проверка
+## ✅ 4.6. Стартиране и визуална проверка
 
 ```bash
 # Създаване на systemd услуга за Vite сървъра на порт 5173
