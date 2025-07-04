@@ -232,6 +232,7 @@ nano src/index.css
 
 ```bash
 # 🚀 Стартиране на Vite сървъра чрез systemd (порт 5173)
+cd ~/NetGalaxyUP
 ./scripts/fastapi-autostart.sh vite 5173
 ```
 
