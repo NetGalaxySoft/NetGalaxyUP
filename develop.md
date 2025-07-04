@@ -127,12 +127,12 @@ chmod +x fastapi-autostart.sh
 ---
 
 ### 🌐 Тест на сървъра
-`http://<IP-АДРЕС>:8000/`
+`http://$(hostname -I | awk '{print $1}'):8000/`
 
 трябва да върне:
 {"status": "ok"}
 
-`http://<IP-АДРЕС>:8000/health`
+`http://$(hostname -I | awk '{print $1}'):8000/health`
 
 трябва да върне:
 {"app": "NetGalaxyUP", "status": "ok"}
@@ -230,13 +230,18 @@ nano src/index.css
 ## ✅ 3.5. Проверка с тестово стартиране
 
 ```bash
-npm run dev
+# 📥 Изтегляне на скрипта fastapi-autostart.sh
+curl -fsSL https://raw.githubusercontent.com/NetGalaxySoft/servers/main/scripts/fastapi-autostart.sh -o scripts/fastapi-autostart.sh
+chmod +x scripts/fastapi-autostart.sh
+
+# 🚀 Стартиране на Vite сървъра чрез systemd (порт 5173)
+./scripts/fastapi-autostart.sh vite 5173
 ```
 
 След това отворете:
 
 ```
-http://localhost:5173
+`http://$(hostname -I | awk '{print $1}'):5173`
 ```
 
 Трябва да се визуализира началният React екран (съобщение: *Vite + React*).
