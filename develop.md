@@ -189,7 +189,11 @@ npx tailwindcss init -p
 
 ## ✅ 3.3. Конфигурация на Tailwind (`tailwind.config.js`)
 
-Отворете файла `tailwind.config.js` и го редактирайте така:
+```bash
+nano tailwind.config.js
+```
+
+Заменете съдържанието с:
 
 ```js
 /** @type {import('tailwindcss').Config} */
@@ -209,7 +213,11 @@ export default {
 
 ## ✅ 3.4. Конфигурация на Tailwind в `src/index.css`
 
-Заменете съдържанието на `src/index.css` с това:
+```bash
+nano src/index.css
+```
+
+Заменете съдържанието с:
 
 ```css
 @tailwind base;
