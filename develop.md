@@ -119,9 +119,10 @@ def read_health():
 ### ▶️ 2.2. Стартиране на тестов сървър
 
 ```bash
+cd ~/NetGalaxyUP
 curl -fsSL https://NetGalaxySoft:<TOKEN>@raw.githubusercontent.com/NetGalaxySoft/servers/main/scripts/fastapi-autostart.sh -o scripts/fastapi-autostart.sh
 chmod +x scripts/fastapi-autostart.sh
-./fastapi-autostart.sh 8000
+./scripts/fastapi-autostart.sh 8000
 ```
 
 ---
