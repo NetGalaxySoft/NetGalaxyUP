@@ -150,9 +150,7 @@ chmod +x fastapi-autostart.sh
 ```bash
 cd ~/NetGalaxyUP/frontend
 npm create vite@latest . -- --template react
-npm install
 ```
-
 🔹 На въпрос за име на проекта, натиснете `Enter`, тъй като вече сте в папката `frontend`.
 
 🔹 Ако се появи следното съобщение:
@@ -161,6 +159,11 @@ npm install
 ● Cancel operation
 ○ Remove existing files and continue
 ○ Ignore files and continue
+```
+След то ва продължете с:
+```bash
+npm install
+
 ```
 
 ✅ Изберете: Ignore files and continue
