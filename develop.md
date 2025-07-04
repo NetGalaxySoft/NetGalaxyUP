@@ -331,7 +331,9 @@ export default function Footer() {
 
 ## ✅ 4.5. Импортиране и сглобяване в `App.jsx`
 
-Отвори `src/App.jsx` и го замени със следния код:
+```bash
+nano src/App.jsx
+```
 
 ```jsx
 import TopBar from "./components/layout/TopBar";
